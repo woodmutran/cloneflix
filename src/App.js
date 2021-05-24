@@ -18,7 +18,7 @@ export default () => {
       let list = await Tmdb.getHomeList();
       setMovieList(list);
 
-      // Pegando o Feature
+      // Pegando o Featured
       let originals = list.filter(i => i.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[randomChosen];
